@@ -45,10 +45,12 @@ I will make sure to try blackcurrant again, I might be mistaken!
 
 ## Setup on Mac OS
 
-- git clone git@github.com:charignon/ICanGuessTheFruitsThatYouLike.git
-- cd ICanGuessTheFruitsThatYouLike
-- Install homebrew http://brew.sh/
-- brew install gcc
-- sudo easy_install networkx
-- sudo easy_install ffnet
-- python main.py
+```bash
+git clone git@github.com:charignon/ICanGuessTheFruitsThatYouLike.git
+cd ICanGuessTheFruitsThatYouLike
+Install homebrew http://brew.sh/
+brew install gcc
+sudo easy_install networkx
+sudo easy_install ffnet
+python main.py
+```
