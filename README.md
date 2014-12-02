@@ -1,4 +1,8 @@
-A quick hack to correlate chemical composition to tastiness of fruits, state what fruit you likes and this program guesses what other fruits you might like or not like using Neural Networks
+A quick hack around neural network to figure out if there is a correlation between chemical composition and appreciation of of fruits.
+
+In other words, you can state what fruit you likes and this program guesses what other fruits you might like or not like using Neural Networks
+
+I used this data: https://fr.wikipedia.org/wiki/Composition_nutritionnelle_des_fruits
 
 You should edit the fruit list to match what you like and don't like.
 The program takes a sample of the fruits to test the training.
