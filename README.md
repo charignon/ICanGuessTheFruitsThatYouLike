@@ -1,3 +1,4 @@
+##Purpose 
 A quick hack around neural networks to study correlation between chemical composition and tastiness of fruits.
 
 In other words, with this program you can state what fruit you like and dislike and this program guesses what other fruits you might like or not dislike like using a Neural Network.
@@ -41,3 +42,13 @@ estim. stderr =  0.432584
 Here the interpretation is that all the predictions were right except one, number 5.
 Based on what I told the program: I don't like fresh blackcurrant and it thinks I should like it based on what it learnt about me :)
 I will make sure to try blackcurrant again, I might be mistaken!
+
+## Setup on Mac OS
+
+- git clone git@github.com:charignon/ICanGuessTheFruitsThatYouLike.git
+- cd ICanGuessTheFruitsThatYouLike
+- Install homebrew http://brew.sh/
+- brew install gcc
+- sudo easy_install networkx
+- sudo easy_install ffnet
+- python main.py
