@@ -3,7 +3,7 @@ A quick hack to correlate chemical composition to tastiness of fruits, state wha
 You should edit the fruit list to match what you like and don't like.
 The program takes a sample of the fruits to test the training.
 You can also modify the training parameter easily.
-Example output :
+Example output (on a bad terminal that does not handle utf-8 -_-) :
 ```bash
 ['Amande s\xc3\xa8che', 'Abricot sucr\xc3\xa9 en conserve', 'Banane fra\xc3\xaeche', 'Banane s\xc3\xa9ch\xc3\xa9e', 'Cassis frais', 'Pistachefra\xc3\xaeche', 'Poire', 'Cerise en conserve', 'Grenadefra\xc3\xaeche', 'Orange']
 Feed-forward neural network: 
