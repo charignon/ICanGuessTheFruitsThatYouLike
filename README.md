@@ -1,12 +1,13 @@
-A quick hack around neural network to figure out if there is a correlation between chemical composition and appreciation of of fruits.
+A quick hack around neural networks to study correlation between chemical composition and tastiness of fruits.
 
-In other words, you can state what fruit you likes and this program guesses what other fruits you might like or not like using Neural Networks
+In other words, with this program you can state what fruit you like and dislike and this program guesses what other fruits you might like or not dislike like using a Neural Network.
 
 I used this data: https://fr.wikipedia.org/wiki/Composition_nutritionnelle_des_fruits
 
-You should edit the fruit list to match what you like and don't like.
-The program takes a sample of the fruits to test the training.
-You can also modify the training parameter easily.
+- You should edit the fruit list to match what you like and don't like.
+- The program takes a sample of the fruits to test the training.
+- You can also modify the training parameter easily.
+
 Example output (on a bad terminal that does not handle utf-8 -_-) :
 ```bash
 ['Amande s\xc3\xa8che', 'Abricot sucr\xc3\xa9 en conserve', 'Banane fra\xc3\xaeche', 'Banane s\xc3\xa9ch\xc3\xa9e', 'Cassis frais', 'Pistachefra\xc3\xaeche', 'Poire', 'Cerise en conserve', 'Grenadefra\xc3\xaeche', 'Orange']
