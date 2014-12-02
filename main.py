@@ -102,7 +102,8 @@ def read_data():
 def main():
     header, tests, train = read_data()
     inputLength = len(header) - 2
-    # Simple neural network
+    # 2 here is the middle layer, you can remove it and try, it does not 
+    # seem to have much impact in that very case
     conec = mlgraph( (inputLength,2,1) )
     net = ffnet(conec)
     train_input = [ u[1:-1] for u in train ]
@@ -110,7 +111,7 @@ def main():
     test_input = [ u[1:-1] for u in tests ]
     test_target  = [ u[-1] for u in tests ]
     net.train_tnc(train_input, target_input, maxfun = 1000)
-    # Just to see if it is wrong, what the program guessed ...
+    # Print the name of the fruits used for test 
     print [t[0] for t in tests]
     net.test(test_input, test_target, iprint = 2)
 
