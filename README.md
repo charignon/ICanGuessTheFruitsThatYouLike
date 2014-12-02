@@ -48,8 +48,7 @@ I will make sure to try blackcurrant again, I might be mistaken!
 ```bash
 git clone git@github.com:charignon/ICanGuessTheFruitsThatYouLike.git
 cd ICanGuessTheFruitsThatYouLike
-Install homebrew http://brew.sh/
-brew install gcc
+brew install gcc  # If needed, install homebrew http://brew.sh/
 sudo easy_install networkx
 sudo easy_install ffnet
 python main.py
