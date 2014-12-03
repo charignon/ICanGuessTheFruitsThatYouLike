@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Let mess guess the fruits you like!</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    
+
+    <!-- jQuery -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <style>
+      .Banner{padding:10px;position:fixed; height:160px; width:70%; left:15%; right:15%; bottom:0; opacity: 0.9; color:white; z-index:900;
+        background: black; }
+      .sticker { z-index:20; width: 150px; height: 50px;word-wrap: break-word; float: left; margin: 10px 10px 10px 0; border: 2px solid;}
+      .draggable { z-index:20; width: 150px; height: 50px;word-wrap: break-word; float: left; margin: 10px 10px 10px 0; border: 2px solid;}
+
+      #happy { width:150px; z-index:0;position:fixed; left:0;bottom:0;;height:150px;background-size: 130px 130px; background-repeat: no-repeat; background-image:url("https://s3.amazonaws.com/colorslive/jpg_512x512/260485-0avY2g7CiqtZD8wB.jpg") ;}
+      #sad { width:150px; height:150px;z-index:0;position:fixed; right:0; bottom:0;background-size: 130px 130px; background-repeat: no-repeat;  background-image:url("http://img2.wikia.nocookie.net/__cb20130805143948/cuttherope/images/7/77/Om_nom.png")}
+      #predictions { margin-bottom:150px;}
+    #fruits-good .draggable{ background-color:lightgreen;}
+    #fruits-pgood .draggable{ background-color:lightgreen;}
+    #fruits-bad .draggable{ background-color:orange;}
+    #fruits-pbad .draggable{ background-color:orange;}
+    </style>
+    <script src="/js/logic.js">
+    </script>
+
+  </head>
+  <!-- About Section -->
+  <section id="about" class="container content-section">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+      <h2>Training: <span id="none-count">0</span> remaining</h2>
+      <div id="fruits-stickers"></div>
+      <div id="draggable" class="ui-widget-content">
+      </div>
+    </div>
+  </div>
+  </section>
+ <section id="about" class="container content-section">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+      <h2>Marked as good</h2>
+      <div id="fruits-good"></div>
+    </div>
+  </div>
+  </section>
+  <section id="about" class="container content-section">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+      <h2>Marked as bad</h2>
+      <div id="fruits-bad"></div>
+    </div>
+  </div>
+  </section>
+  <section id="about" class="container content-section">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+      <h2>Predicted as good</h2>
+      <div id="fruits-pgood"></div>
+    </div>
+  </div>
+  </section>
+  <section id="predictions" class="container content-section">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+      <h2>Predicted as bad</h2>
+      <div id="fruits-pbad"></div>
+    </div>
+  </div>
+  </section>
+
+  <div class="Banner">
+    <b>Instructions</b><br>
+    Please drag and drop the fruits to the characters on the right or left.
+    <br/>
+    Left: you like it; Right: you don't like it;
+    <br/>
+    This is the training phase to teach the program what you like and don't like.
+    <br/>
+    When you are done click on <b>Launch</b>
+    <br/>
+      <a id="launch" class="btn btn-success" type="button" href="#">Launch</a>
+      <a id="reset" class="btn btn-warning" type="button" href="#">Reset</a>
+  </div>
+      <div id="happy" class="ui-widget-header"> </div>
+      <div id="sad" class="ui-widget-header"> </div>
+  <!-- Plugin JavaScript -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.12.1/react.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.12.1/JSXTransformer.js"></script>
+
+</body>
+
+</html>
