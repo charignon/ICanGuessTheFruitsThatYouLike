@@ -7,14 +7,14 @@ $(function() {
     "pgood":{"ui":"#fruits-pgood","values":[]},
     "pbad":{"ui":"#fruits-pbad","values":[]}
   }
- 
+  // Append a fruit to a new group 
   function appendTo(ui, key){
+    // Get the name of the group and the fruit
     destGroup = groups[key]
-    // Get the name
     itemVal = ui.draggable.text();
     // UI effect
     ui.draggable.fadeOut();
-    // Clean from previous group
+    // Remove from previous group
     _.each(groups,function(d){
       var index = d.values.indexOf(itemVal)
       if (index > -1) { d.values.splice(index,1); }
@@ -26,16 +26,21 @@ $(function() {
  
   // Main drawing function to redraw UI from logic
   function drawGroups(){
-    console.log(groups)
+
+    // Build a fruit HTML node
     function buildFruit( n){ return "<div class='draggable'>"+n+"</div>"; };
+    // Update the count of unused element
     function updateCounts(){ $("#none-count").text(groups.none.values.length);}
-      _.each(groups, function(group){
-        console.log(group)
-        $(group.ui).text("");
-        _.each(group.values, function(element){
-          $(group.ui).append(buildFruit(element));
-        });
+    
+    // Draw each group
+    _.each(groups, function(group){
+      $(group.ui).text("");
+      _.each(group.values, function(element){
+        $(group.ui).append(buildFruit(element));
       });
+    });
+    
+    // Rebind the draggable feature
     $( ".draggable" ).draggable();
     updateCounts()
   }
